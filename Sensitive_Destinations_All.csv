@@ -1,0 +1,312 @@
+place_name,place_label,coordinate1,coordinate2,district
+San Diego California Temple,religious_site,32.86665682,-117.2288316,1
+"Mary, Star of the Sea",religious_site,32.84389697,-117.273158,1
+The Church of Jesus Christ of Latter-day Saints,religious_site,32.87982249,-117.2446704,1
+Christian Science Reading Room,religious_site,32.84604314,-117.274034,1
+Christian Science-Church,religious_site,32.84731099,-117.2708819,1
+All Hallows Catholic Church,religious_site,32.83467243,-117.2492717,1
+St. James by-the-Sea Episcopal Church,religious_site,32.84501229,-117.2769087,1
+Sharp Medical Group,hospital,32.90775066,-117.1807082,1
+Scripps Green Hospital,hospital,32.89753023,-117.2427404,1
+Thornton Pavilion,hospital,32.8752741,-117.2231277,1
+Jacobs Medical Center at UC San Diego Health,hospital,32.87781599,-117.2261759,1
+Scripps Memorial Hospital La Jolla - Center For Women's Health,hospital,32.88525151,-117.2251399,1
+Planned Parenthood - Mission Bay Mimi Brien Center,abortion_clinic,32.80346906,-117.216118,1
+MD Today Urgent Care,hospital,32.94109753,-117.2318983,1
+Medical Testing Center,HIV_clinic,32.80188957,-117.2367126,1
+U.S. Gunner - Gun Store,gun_store,32.80560782,-117.2204943,1
+Thrive CBD,dispensary,32.79997313,-117.2411964,1
+MedMen,dispensary,32.89958917,-117.2207145,1
+Torrey Holistics Dispensary And Weed Delivery San Diego,dispensary,32.89835431,-117.2219832,1
+Cannabist San Diego,dispensary,32.80812782,-117.2177968,1
+Scripps Pharmacy at Scripps Clinic Torrey Pines,pharmacy,32.89864036,-117.2428177,1
+CVS Pharmacy,pharmacy,32.84166931,-117.2751829,1
+CVS Pharmacy,pharmacy,32.86933943,-117.2306184,1
+Pavilions,grocery_store,32.84178388,-117.2735802,1
+Ralphs Fresh Fare,grocery_store,32.86633293,-117.2318027,1
+Vons,grocery_store,32.9203817,-117.2150615,1
+The Church of Jesus Christ of Latter-day Saints,religious_site,32.84057894,-117.0916174,7
+The Church of Jesus Christ of Latter-day Saints,religious_site,32.79703319,-117.1716546,7
+Newbreak Church Tierrasanta,religious_site,32.82131703,-117.0992196,7
+Founders Chapel,religious_site,32.77702768,-117.1915215,7
+Sharp Memorial Hospital,hospital,32.80239947,-117.1533046,7
+Rady Children's Hospital,hospital,32.80101916,-117.1539227,7
+Kaiser Permanente Zion Medical Center,hospital,32.79156521,-117.0954643,7
+Wellgreens La Mesa Cannabis Dispensary,dispensary,32.77556353,-117.0446259,7
+The Reserve,dispensary,32.82083695,-117.1373696,7
+Walgreens,dispensary,32.80349521,-117.0086795,7
+CVS Pharmacy,pharmacy,32.79544641,-117.0997787,7
+CVS Pharmacy,pharmacy,32.80499109,-117.1394197,7
+Linda Vista Pharmacy,pharmacy,32.78693299,-117.1691797,7
+ALDI,grocery_store,32.80439929,-117.0076244,7
+Vons,grocery_store,32.83271095,-117.1040443,7
+Ralphs,grocery_store,32.77619425,-117.1554182,7
+7-Eleven,grocery_store,32.80055084,-117.0137339,7
+San Diego Guns,gun_store,32.78293016,-117.0984118,7
+Wilde Built Tactical,gun_store,32.79160119,-117.0232175,7
+A M Precision,gun_store,32.7846109,-117.1011238,7
+Grace Church San Diego,religious_site,32.7623096,-117.1331621,3
+Covenant Church,religious_site,32.75465851,-117.1307588,3
+North Park Presbyterian Church,religious_site,32.7514463,-117.1281839,3
+Unity Fellowship Church San Diego Ca,religious_site,32.74956945,-117.1298576,3
+Plymouth Congregational Church,religious_site,32.74913633,-117.1346641,3
+North Park Baptist Church,religious_site,32.74848663,-117.124064,3
+Newbreak Church Hillcrest,religious_site,32.75032741,-117.1496416,3
+Mission Hills United Church of Christ,religious_site,32.75159067,-117.1744896,3
+North Park Community Advent Christian Church,religious_site,32.74724785,-117.1306863,3
+Kindred Hospital San Diego,hospital,32.75789175,-117.1447626,3
+Mercy Hospital of Scrippshealth,hospital,32.75312771,-117.1582809,3
+UC San Diego IPCE Unit,hospital,32.75652031,-117.1647182,3
+Scripps Mercy Hospital San Diego,hospital,32.75226149,-117.1605983,3
+Select Specialty Hospital - San Diego,hospital,32.75042075,-117.1598688,3
+Mercy Medical,hospital,32.75168401,-117.1618,3
+Fresenius Medical Care at Scripps Mercy Hospital San Diego,hospital,32.75027638,-117.1631304,3
+UC San Diego Medical Center,hospital,32.75407512,-117.1655551,3
+UC San Diego IPCE Unit,hospital,32.75594286,-117.164686,3
+UCSD Hillcrest - Central Plant (ICRA Class),hospital,32.75660152,-117.166467,3
+Ferry Sondra M,hospital,32.7577113,-117.1628192,3
+UC San Diego AntiViral Research Center (AVRC HQ),HIV_clinic,32.75743722,-117.1655685,3
+Owen Clinic,HIV_clinic,32.75440557,-117.1650535,3
+Safe Lab STD Testing Centre,HIV_clinic,32.75238442,-117.1619636,3
+LCA,HIV_clinic,32.7509407,-117.1605045,3
+HIV Coordinated Services & Prevention Center,HIV_clinic,32.75224005,-117.1299487,3
+AHF Healthcare Center - San Diego,hospital,32.74343302,-117.1606761,3
+Hillcrest Family Health Center,hospital,32.75249269,-117.1619636,3
+Royal Loan,gun_store,32.75681475,-117.1295483,3
+Cannabis 21+ Powered By SDRC - San Diego Recreational Cannabis Dispensary,dispensary,32.76642124,-117.1517336,3
+Target Grocery,grocery_store,32.76944911,-117.150532,3
+Trader Joe's,grocery_store,32.76786133,-117.1549952,3
+Vons,grocery_store,32.75465279,-117.1292889,3
+Barons Market North Park,grocery_store,32.74981638,-117.1247399,3
+Sprouts Farmers Market,grocery_store,32.7550137,-117.1456825,3
+Trader Joe's,grocery_store,32.75169323,-117.1534931,3
+Ralphs Fresh Fare,grocery_store,32.7513323,-117.1549523,3
+Smart & Final Extra!,grocery_store,32.74981638,-117.1404469,3
+Whole Foods,grocery_store,32.74880576,-117.1582138,3
+Vons,grocery_store,32.75053825,-117.168256,3
+Lazy Acres,grocery_store,32.75219852,-117.167741,3
+CVS,pharmacy,32.76940966,-117.1503174,3
+Walgreens Pharmacy,pharmacy,32.75150939,-117.1242249,3
+CVS,pharmacy,32.749343,-117.1257424,3
+CVS,pharmacy,32.74940962,-117.1287521,3
+Pride Pharmacy,pharmacy,32.75082602,-117.1521911,3
+Community Pharmacy,pharmacy,32.74976965,-117.1590208,3
+Vons Pharmacy,pharmacy,32.75313678,-117.1614543,3
+Walgreens Pharmacy,pharmacy,32.74930749,-117.1627104,3
+AHF Hillcrest Pharmacy,pharmacy,32.74963761,-117.1636524,3
+CVS,pharmacy,32.75109011,-117.1623964,3
+Vons Pharmacy,pharmacy,32.74996772,-117.168127,3
+San Diego International Airport,airport,32.73140614,-117.1952183,2
+OB One Church,religious_site,32.74934808,-117.245965,2
+The Rock Church,religious_site,32.73794173,-117.2191858,2
+Park Hill Church,religious_site,32.74054077,-117.214036,2
+Metropolitan Community Church,religious_site,32.79308295,-117.2035646,2
+Pioneer Ocean View United Church of Christ,religious_site,32.78846511,-117.1944666,2
+Lighthouse Bible Church San Diego,religious_site,32.83874974,-117.1875099,2
+Redeemer's Grace Church,religious_site,32.83355731,-117.2161773,2
+Northminster Presbyterian Church,religious_site,32.8342785,-117.2012428,2
+Grace Bible Church San Diego,religious_site,32.80903341,-117.183905,2
+Clairemont Medical Center,hospital,32.82185638,-117.1834759,2
+Sharp healthcare,hospital,32.7546732,-117.2167818,2
+Progressive Health Services,HIV_clinic,32.74511599,-117.2416627,2
+Discount Gun Mart,gun_store,32.77653153,-117.2052547,2
+Cross Armory Business Office,gun_store,32.72629169,-117.2328883,2
+Golden State Greens,dispensary,32.75841617,-117.2079313,2
+Vons,grocery_store,32.83341143,-117.2051848,2
+Vons,grocery_store,32.81999623,-117.1794356,2
+Smart and Final,grocery_store,32.83629616,-117.1844138,2
+Vons,grocery_store,32.75332296,-117.2166862,2
+Barons Market Point Loma,grocery_store,32.75534409,-117.2305907,2
+Ralphs,grocery_store,32.73092955,-117.2266426,2
+Target,grocery_store,32.7497002,-117.2482719,2
+Vons,grocery_store,32.73959342,-117.2165145,2
+Sprouts,grocery_store,32.7960231,-117.1925569,2
+CVS,pharmacy,32.83393874,-117.2045733,2
+CVS,pharmacy,32.8219662,-117.1786524,2
+Rite Aid,pharmacy,32.79888206,-117.1927286,2
+CVS,pharmacy,32.75745986,-117.2222544,2
+Point Loma Cabrillo Drug,pharmacy,32.72451213,-117.2460938,2
+CVS,pharmacy,32.74934808,-117.2055817,2
+The Church at Rancho Bernardo,religious_site,33.02145135,-117.0780389,5
+Rancho Bernardo Community Presbyterian Church,religious_site,33.02011996,-117.0614736,5
+Pomerado Christian Church,religious_site,33.00774073,-117.0558088,5
+Peñasquitos Lutheran Church,religious_site,32.98110509,-117.0920293,5
+Hope Presbyterian Church,religious_site,32.97212781,-117.1258879,5
+Mt Carmel Church-The Nazarene,religious_site,32.96377467,-117.112155,5
+Temple Adat Shalom,religious_site,33.0054192,-117.0572812,5
+The Church of Jesus Christ of Latter-day Saints,religious_site,32.97801413,-117.1435471,5
+Palomar hospital,hospital,32.99866265,-117.0557423,5
+Medical Testing Center,HIV_clinic,33.01305146,-117.0579882,5
+spartan defense llc,gun_store,33.02117009,-117.0610789,5
+March and Ash,dispensary,32.96382325,-117.0923356,5
+Quality Therapeutics,dispensary,33.01620704,-117.1261429,5
+Target,grocery_store,33.0729981,-117.0654475,5
+Vons,grocery_store,33.02350044,-117.0735156,5
+Albertsons,grocery_store,33.01990214,-117.0625293,5
+Ralphs,grocery_store,33.02119755,-117.1131694,5
+Target,grocery_store,33.02350044,-117.126044,5
+Vons,grocery_store,32.96000492,-117.1248423,5
+Sprouts,grocery_store,33.00464373,-117.0592677,5
+Trader Joe's,grocery_store,32.98376709,-117.0757472,5
+CVS,pharmacy,32.95776136,-117.1283877,5
+Vons Pharmacy,pharmacy,32.96323457,-117.1539652,5
+Vons Pharmacy,pharmacy,33.02389016,-117.0726387,5
+CVS,pharmacy,33.02182523,-117.12533,5
+CVS,pharmacy,33.07348157,-117.0652485,5
+Naval Medical Center,hospital,32.725,-117.145,3
+Christ United Presbyterian Church,religious_site,32.724,-117.128,3
+North Park Presbyterian Church,religious_site,32.751,-117.128,3
+NewbreakChurch Hillcrest,religious_site,32.75,-117.15,3
+CVS,pharmacy,32.727,-117.128,3
+CVS,pharmacy,32.749,-117.129,3
+CVS,pharmacy,32.749,-117.126,3
+Wallgreens,pharmacy,32.748,-117.126,3
+Mcgill School of Success,school,32.736,-117.121,3
+McKinley Elementary School,school,32.725,-117.129,3
+Roosevelt Middle School,school,32.74,-117.148,3
+Jefferson Elementary School,school,32.748,-117.133,3
+North Park Pediatric Clinic & Women's Health Center,hospital,32.743,-117.13,3
+Target,grocery_store,32.748,-117.129,3
+Barons Market North Park,grocery_store,32.748,-117.124,3
+Target,grocery_store,32.739,-117.125,3
+Parkside,grocery_store,32.727,-117.129,3
+North Park Branch Library,library,32.747,-117.127,3
+Neighborhood Lending Library,library,32.722,-117.13,3
+Little Free Library XO,library,32.744,-117.136,3
+San Diego City College Library,library,32.718,-117.152,3
+Open Ministry,religious_site,32.71,-117.16,3
+City Church Ministries,religious_site,32.71391667,-117.1619722,3
+Common Church,religious_site,32.71266667,-117.1531111,3
+Harbor City Church,religious_site,32.71302778,-117.1493611,3
+Living Water Church of the Nazarene,religious_site,32.71163889,-117.1496389,3
+East Village Community Church,religious_site,32.71055556,-117.15225,3
+Second Sunday Church,religious_site,32.70933333,-117.1550556,3
+Urban Discovery Academy,schools,32.71994444,-117.1540833,3
+CVS Pharmacy,pharmacy,32.71680556,-117.1601389,3
+CVS Pharmacy,pharmacy,32.71580556,-117.1608056,3
+Allen Pharmacy,pharmacy,32.71672222,-117.1616111,3
+Ralphs Pharmacy,pharmacy,32.7125,-117.1632778,3
+CVS Pharmacy,pharmacy,32.71138889,-117.15875,3
+CVS Pharmacy,pharmacy,32.70947222,-117.1604167,3
+Albertsons Pharmacy,pharmacy,32.71205556,-117.1516944,3
+CVS Pharmacy,pharmacy,32.70647222,-117.1544722,3
+Valet Market,grocery_store,32.71788889,-117.1563611,3
+Krisp Beverages + Natural Foods,grocery_store,32.71616667,-117.1584444,3
+Ralphs,grocery_store,32.71213889,-117.1636944,3
+Grocery Outlet,grocery_store,32.71161111,-117.1550556,3
+Albertsons,grocery_store,32.71208333,-117.1519167,3
+Smart & Final,grocery_store,32.71269444,-117.1509722,3
+San Diego City College Library,library,32.71775,-117.1525556,3
+San Diego Law Library,library,32.71694444,-117.1646944,3
+United States Courts Library,library,32.71555556,-117.1675278,3
+San Diego Central Library,library,32.70852778,-117.154,3
+Sowing Seeds For Jesus Christian Missionary Churches,religious_site,32.709947,-117.071562,4
+St. John Church Of God In Christ,religious_site,32.713091,-117.066234,4
+City of Hope International Church,religious_site,32.702957,-117.087039,4
+Phillips Temple CME Church,religious_site,32.715948,-117.080667,4
+Church of Christ-San Diego,religious_site,32.711162,-117.049383,4
+Spirit Ministries,religious_site,32.734374,-117.077329,4
+Medi Center,hospital,32.711413,-117.106388,4
+Our Place,HIV_clinic,32.707133,-117.085316,4
+Planned Parenthood - Euclid Avenue Francis Torbert Center,abortion_clinic,32.706184,-117.08518,4
+Food4Less,grocery_store,32.708388,-117.085218,4
+Manolo Farmers Market,grocery_store,32.720305,-117.085164,4
+Sundance Market,grocery_store,32.696721,-117.09339,4
+Imperial Food Supermarket,grocery_store,32.710472,-117.05775,4
+Big Value Market,grocery_store,32.711966,-117.048909,4
+Hanks Farmer Market,grocery_store,32.698647,-117.027229,4
+Walgreens Pharmacy,pharmacy,32.711551,-117.085273,4
+Paradise Pharmacy,pharmacy,32.684572,-117.083202,4
+Paradise Hills Pharmacy,pharmacy,32.675368,-117.064531,4
+The Medicine Shoppe Pharmacy,pharmacy,32.677208,-117.03908,4
+Sam's Club Pharmacy,pharmacy,32.739585,-117.05689,4
+Oak Park Branch Library,library,32.734949,-117.079953,4
+Valencia Park/Malcolm X Branch Library,library,32.710529,-117.08409,4
+Saint Mary Episcopal Church,religious_site,32.763276,-117.115633,9
+Celestial Church Of Christ San Diego Parish,religious_site,32.75864,-117.073189,9
+Family Care,hospital,32.749564,-117.101191,9
+Alvarado Hospital Medical Center,hospital,32.775628,-117.057089,9
+Planned Parenthood - City Heights Health Center,abortion_clinic,32.749017,-117.101965,9
+El Super #51,grocery_store,32.74866,-117.0988,9
+Families Market,grocery_store,32.740359,-117.107174,9
+"Murphy's Market",grocery_store,32.743376,-117.101053,9
+Fairmount Supermarket,grocery_store,32.738424,-117.101125,9
+Supermercado Murphy,grocery_store,32.749635,-117.095976,9
+City Heights Market,grocery_store,32.749631,-117.094752,9
+Eagle Food Center,grocery_store,32.74927,-117.094409,9
+University Produce Food Market,grocery_store,32.749635,-117.087854,9
+Northgate Market,grocery_store,32.746699,-117.078539,9
+City Heights/Weingart Branch Library,library,32.747643,-117.100245,9
+Self-Realization Fellowship Temple,religious_site,32.73718256,-117.1644426,3
+St. Paul's Episcopal Cathedral,religious_site,32.73403329,-117.1596151,3
+Mission Hills United Church of Christ,religious_site,32.75095882,-117.1743334,3
+Mission Hills United Methodist Church,religious_site,32.7506777,-117.176109,3
+"San Diego First Church of Christ, Scientist",religious_site,32.731192,-117.1632072,3
+First Lutheran Church,religious_site,32.72001649,-117.1621873,3
+First Presbyterian Church of San Diego,religious_site,32.72334628,-117.1617981,3
+Light Church Downtown,religious_site,32.72825999,-117.171821,3
+Central Christian Church,religious_site,32.72497938,-117.1625451,3
+Ohr Shalom Synagogue,religious_site,32.73157504,-117.1622861,3
+Temple Beth Israel,religious_site,32.75375131,-117.1931449,3
+Church Of Scientology,religious_site,32.71931223,-117.1612305,3
+UC San Diego Medical Center,hospital,32.75387709,-117.1655502,3
+Scripps Mercy Hospital,hospital,32.75145984,-117.1604575,3
+Select Specialty Hospital,hospital,32.74966043,-117.1597897,3
+Sharp Rees-Stealy Downtown Medical Clinic,hospital,32.72530752,-117.1617107,3
+Elm Street Family Health Center,hospital,32.7243031,-117.163238,3
+Hillcrest Family Health Center,hospital,32.75169633,-117.1620312,3
+Planned Parenthood First Avenue,abortion_clinic,32.72646697,-117.1636264,3
+Owen Clinic,HIV_clinic,32.75312369,-117.1652486,3
+AHF Healthcare Center,HIV_clinic,32.74287623,-117.1607119,3
+Safe Lab STD Testing Center,HIV_clinic,32.7394635,-117.1623898,3
+Safe Lab STD Testing Center,HIV_clinic,32.72472083,-117.1636518,3
+Hillcrest Pawnbrokers,gun_store,32.74595079,-117.1597221,3
+Klover Dispensary,dispensary,32.74326239,-117.1883458,3
+Vons,grocery_store,32.74936142,-117.1682138,3
+CVS,pharmacy,32.72487379,-117.160531,3
+Rite Aid,pharmacy,32.72007283,-117.1690259,3
+The Church of San Diego,religious_site,32.90757485,-117.1718439,6
+The Church of Jesus Christ of Latter-day Saints,religious_site,32.92199508,-117.1275286,6
+Grace Bible Church San Diego,religious_site,32.80462628,-117.1839033,6
+Clairemont Christian Church,religious_site,32.82225464,-117.2110212,6
+Cao Dai Temple of San Diego,religious_site,32.83165788,-117.2124267,6
+"Hanuman Temple, San Diego",religious_site,32.8966779,-117.1290539,6
+san diego genesee,hospital,32.91466722,-117.1426512,6
+Rady Children’s Hospital-San Diego,hospital,32.80942742,-117.1440586,6
+Kaiser Permanente San Diego Medical Center,hospital,32.83087182,-117.1348722,6
+Planned Parenthood - Mira Mesa Health Center,abortion_clinic,32.9156042,-117.1429905,6
+Planned Parenthood - Kearny Mesa Joan & Irwin Jacobs Center,abortion_clinic,32.83607621,-117.1652203,6
+Gunfighter Tactical,gun_store,32.89532328,-117.1437546,6
+Socal Gun,gun_store,32.83101445,-117.1530243,6
+BaM Body and Mind Dispensary,dispensary,32.88714096,-117.1464639,6
+Cannabist San Diego,dispensary,32.80976522,-117.2112103,6
+MedMen,dispensary,32.83669462,-117.1462531,6
+CVS Pharmacy,pharmacy,32.91187207,-117.1462485,6
+CVS Pharmacy,pharmacy,32.86963749,-117.2028968,6
+Good Morning Pharmacy,pharmacy,32.83501412,-117.1474502,6
+CVS Pharmacy,pharmacy,32.82448427,-117.1780059,6
+H-Mart Balboa,grocery_store,32.82203221,-117.1531961,6
+Food4Less,grocery_store,32.83243612,-117.15793,6
+Vons,grocery_store,32.81978807,-117.1760161,6
+Aldi,grocery_store,32.9072813,-117.1705684,6
+Riley School,school,32.81056908,-117.1787167,6
+Whittier,school,32.80570866,-117.1996272,6
+Temple Bethel del Cladic,religious_site,32.70328815,-117.116778,8
+Buddhist Temple of San Diego,religious_site,32.71384165,-117.1225084,8
+Ocean View Church,religious_site,32.58610316,-117.0704411,8
+San Diego Church,religious_site,32.70668101,-117.1391399,8
+Hospital & Institute,hospital,32.57276726,-117.0619568,8
+Planned Parenthood - Chula Vista Health Center,abortion_clinic,32.6053444,-117.0743857,8
+Harbor Collective,dispensary,32.69396767,-117.1314461,8
+Luxury Cure Healing Center,dispensary,32.55472643,-117.0384057,8
+Urbn Leaf San Ysidro Cannabis Dispensary,dispensary,32.54792576,-117.0289643,8
+Rite Aid,pharmacy,32.58125476,-117.0870495,8
+Border Village Pharmacy,pharmacy,32.5507291,-117.0314312,8
+CVS Pharmacy,pharmacy,32.70495977,-117.1532471,8
+Eldahmy Wellness Pharmacy,pharmacy,32.70308194,-117.1388275,8
+Northgate Market,grocery_store,32.69206084,-117.1032435,8
+Mike's Market,grocery_store,32.70181188,-117.1152597,8
+Vons,grocery_store,32.58543882,-117.0357476,8
+El Picador Foods,grocery_store,32.5754581,-117.0546304,8
+Los Altos Elementary School,school,32.57336406,-117.0507634,8
+Mountain View School,school,32.69930994,-117.1190377,8
