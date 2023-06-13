@@ -50,8 +50,8 @@ def get_route(start_location, end_location):
     """
     geolocator = Nominatim(user_agent="alpr")  # initialize geolocator
     # look up coordinates
-    start_location = geolocator.reverse(start_location)
-    end_location = geolocator.reverse(end_location)
+    start_location = geolocator.reverse(start_location, timeout=10)
+    end_location = geolocator.reverse(end_location, timeout=10)
     start_coords = (start_location.latitude, start_location.longitude)
     end_coords = (end_location.latitude, end_location.longitude)
 
@@ -315,10 +315,10 @@ async def simulate_routes_case_study(alpr_coords, df_start, case_study_destinati
 
 def make_argparser():
     parser = argparse.ArgumentParser(description='Simulate routes')
-    parser.add_argument('--camera_csv', type=str, default='/Users/nvog/Downloads/ALPR_camera_map.csv', help='ALPR camera csv file.')
-    parser.add_argument('--source_csv', type=str, default='/Users/nvog/Downloads/Neighborhood_Locations_All.csv', help='Source location csv file.')
-    parser.add_argument('--destination_csv', type=str, default='/Users/nvog/Downloads/Sensitive_Destinations_All.csv', help='Destination location csv file.')
-    parser.add_argument('--demographics_csv', type=str, default='/Users/nvog/Downloads/SANDAG_District_Demographic_Info.csv', help='District demographic csv file.')
+    parser.add_argument('--camera_csv', type=str, default='ALPR_camera_map.csv', help='ALPR camera csv file.')
+    parser.add_argument('--source_csv', type=str, default='Neighborhood_Locations_All.csv', help='Source location csv file.')
+    parser.add_argument('--destination_csv', type=str, default='Sensitive_Destinations_All.csv', help='Destination location csv file.')
+    parser.add_argument('--demographics_csv', type=str, default='SANDAG_District_Demographic_Info.csv', help='District demographic csv file.')
     parser.add_argument('--camera_radius', type=int, default=18, help='Camera view radius (in meters). Chosen to be 18 meters empirically.')
     parser.add_argument('--destination_radius_threshold', type=int, default=4828, help='Upper bound for distance from destination to source (4828 is 3 mi in meters).')
     parser.add_argument('--start_district', type=int, default=None, choices=[1, 2, 3, 4, 5, 6, 7, 8, 9], help='Optional district number to simulate routes from.')
@@ -355,12 +355,13 @@ if __name__ == '__main__':
     df_end = pd.read_csv(args.destination_csv)
     df_dem = pd.read_csv(args.demographics_csv)
 
+    # TODO:
     # filter demographics by start district
-    if args.start_district is not None:
-        dem_pop_str = args.demographic + '_population'
-        # calculate number of routes as the percentage of population for the demographic in the district
-        num_routes = int(args.num_routes_by_population_pct_total * (df_dem[args.demographic + '_population'][df_dem['district'] == args.start_district].sum() / df_dem[args.demographic + '_population'].sum()))
-        df_dem = df_dem[df_dem['district'] == args.start_district]
+    # if args.start_district is not None:
+    #     dem_pop_str = args.demographic + '_population'
+    #     # calculate number of routes as the percentage of population for the demographic in the district
+    #     num_routes = int(args.num_routes_by_population_pct_total * (df_dem[args.demographic + '_population'][df_dem['district'] == args.start_district].sum() / df_dem[args.demographic + '_population'].sum()))
+    #     df_dem = df_dem[df_dem['district'] == args.start_district]
 
     alpr_lat_lons = df_alpr[['Latitude', 'Longitude']]
     alpr_coords = list(
@@ -389,17 +390,31 @@ if __name__ == '__main__':
             camera_radius=args.camera_radius,
             start_district=args.start_district
         ))
+        num_cameras_reached_per_trip = [len(c) for c in camera_coords_reached]
+        print(num_cameras_reached_per_trip)
         cameras_reached = [c for cl in camera_coords_reached for c in cl]
         print(cameras_reached)
+        plt.figure(figsize=(8, 10))
+        # make a bar plot using cameras_reached as the data with the labels being the unique entries in labels and the values as percentages
+        plt.bar(range(0, len(set(num_cameras_reached_per_trip))), [num_cameras_reached_per_trip.count(c) / len(num_cameras_reached_per_trip) for c in set(num_cameras_reached_per_trip)], color='blue')
+        # plt.hist(cameras_reached, bins=range(0, max(cameras_reached)),  weights=np.ones(len(cameras_reached)) / len(cameras_reached))
+        plt.xlabel('Number of cameras passed that are within 1km of destination')
+        plt.xticks(range(0, len(set(num_cameras_reached_per_trip))), [f'{i}' for i in range(0, len(set(num_cameras_reached_per_trip)))])
+        plt.title(f'Hit rate on cameras around 1km radius of Little Italy\ndestination from simulated, random start locations (n={args.num_routes})')
+        plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+        plt.savefig(f'casestudy_num_nr{args.num_routes}_cr{args.camera_radius}_counts.png')
+        plt.close()
+        # make another plot
         plt.figure(figsize=(8, 10))
         # make a bar plot using cameras_reached as the data with the labels being the unique entries in labels and the values as percentages
         plt.bar(range(0, len(set(cameras_reached))), [cameras_reached.count(c) / len(cameras_reached) for c in set(cameras_reached)], color='blue')
         # plt.hist(cameras_reached, bins=range(0, max(cameras_reached)),  weights=np.ones(len(cameras_reached)) / len(cameras_reached))
         plt.xlabel('Cameras within 1km of destination')
         plt.xticks(range(0, len(set(cameras_reached))), [f'Camera\n({c[0]},\n{c[1]})' for c in set(cameras_reached)])
-        plt.title(f'Hit rate on cameras around 1km radius of Little Italy\ndestination from simulated, random start locations (n={args.num_routes})')
+        plt.title(f'Which cameras are passed around 1km radius of Little Italy\ndestination from simulated, random start locations (n={args.num_routes})')
         plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-        plt.savefig(f'casestudy_nr{args.num_routes}_cr{args.camera_radius}.png')
+        plt.savefig(f'casestudy_breakdown_nr{args.num_routes}_cr{args.camera_radius}.png')
+        plt.close()
     else:
         cameras_reached = asyncio.run(simulate_routes(
             alpr_coords, 
@@ -411,7 +426,7 @@ if __name__ == '__main__':
             destination_labels_whitelist=destination_labels_whitelist,
             start_district=args.start_district
         ))
-        print(cameras_reached)
+        # print(cameras_reached)
 
         print(
             f'Average number of cameras passed per route ({len(cameras_reached)} total route(s)): ' 
@@ -419,6 +434,7 @@ if __name__ == '__main__':
             f'{np.std(cameras_reached) if sum(cameras_reached) > 0 else "NaN"} ' 
             f'(median: {np.median(cameras_reached) if sum(cameras_reached) > 0 else "NaN"})'
         )
+        print(cameras_reached)
 
         plt.figure(figsize=(8, 10))
         # make a bar plot using cameras_reached as the data with the labels being the unique entries in labels and the values as percentages
