@@ -36,6 +36,7 @@ from aiohttp import ClientSession
 from tqdm.asyncio import tqdm_asyncio
 import matplotlib.pyplot as plt
 from matplotlib.ticker import PercentFormatter
+import seaborn as sns
 
 
 # SERVER="https://router.project-osrm.org"
@@ -50,10 +51,12 @@ def get_route(start_location, end_location):
     """
     geolocator = Nominatim(user_agent="alpr")  # initialize geolocator
     # look up coordinates
-    start_location = geolocator.reverse(start_location, timeout=10)
-    end_location = geolocator.reverse(end_location, timeout=10)
-    start_coords = (start_location.latitude, start_location.longitude)
-    end_coords = (end_location.latitude, end_location.longitude)
+    # start_location = geolocator.reverse(start_location, timeout=10)
+    # end_location = geolocator.reverse(end_location, timeout=10)
+    # start_coords = (start_location.latitude, start_location.longitude)
+    # end_coords = (end_location.latitude, end_location.longitude)
+    start_coords = start_location
+    end_coords = end_location
 
     # get the route using Open Source Routing API
     url = f"{SERVER}/route/v1/driving/{start_coords[1]},{start_coords[0]};{end_coords[1]},{end_coords[0]}?overview=full&alternatives=false&annotations=nodes&geometries=geojson"
@@ -206,7 +209,7 @@ def simulate_routes_serial(alpr_coords, df_start, df_end, n=1, camera_radius=25,
 
 async def _throttled_api_request(alpr_coords, start_location, df_end_i, camera_radius, destination_radius_threshold, destination_labels_whitelist, limiter, i):
     # reformat start coords as string
-    start_lat_lon = str(start_location.coordinate1) + ',' + str(start_location.coordinate2)
+    start_lat_lon = (float(start_location.coordinate1), float(start_location.coordinate2))
     # sort df_end's rows by the distance from the start_location
     df_end_i['distance'] = df_end_i.apply(lambda row: geodesic((row.coordinate1, row.coordinate2), (start_location.coordinate1, start_location.coordinate2)).meters, axis=1)
     df_end_i = df_end_i.sort_values(by=['distance'])
@@ -217,7 +220,7 @@ async def _throttled_api_request(alpr_coords, start_location, df_end_i, camera_r
     print(f'Sampling from {len(df_end_i)} end locations within', destination_radius_threshold, 'meters of start location.')
     end_location = df_end_i.sample(n=1).iloc[0]
     # reformat end coords as str
-    end_lat_lon = str(end_location.coordinate1) + ', ' + str(end_location.coordinate2)
+    end_lat_lon = (float(end_location.coordinate1), float(end_location.coordinate2))
     print(f'Computing random route #{i+1} from neighborhood at ({start_lat_lon}) to {end_location.place_name} ({end_lat_lon})')
     route = get_route(start_lat_lon, end_lat_lon)
     print('Route length (pts):', len(route))
@@ -311,6 +314,44 @@ async def simulate_routes_case_study(alpr_coords, df_start, case_study_destinati
     print('Errors:', errs)
     await session.close()
     return [i for i in cameras_reached if i is not None]
+
+
+def make_violin_plot(data, title, x_label, y_label, save_path=None):
+    # data = {
+    #     'district': [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    #     '1 mile': [0.18456375838926176, 0.45701357466063347, 0.942, 0.508695652173913, 0.043795620437956206, 0, 0.746031746031746, 2.222826086956522, 1.1875],
+    #     '3 mile': [0.474, 1.198, 2.57, 2.262, 0.7569892473118279, 0.594, 1.868, 2.2520661157024793, 3.602],
+    #     '5 mile': [1.212, 2.172, 2.812, 3.39, 0.908, 1.33, 2.144, 2.506, 4.064],
+    #     '10 mile': [1.956, 2.836, 2.842, 3.32, 1.316, 2.676, 2.708, 2.398, 4.022],
+    #     '15 mile': [2.336, 2.728, 2.988, 3.202, 2.004, 3.212, 2.732, 2.902, 4.088]
+    # }
+
+    # df = pd.DataFrame(data)
+
+    # # Reshape the data for plotting
+    # df_melted = df.melt(id_vars='district', var_name='distance', value_name='cameras')
+
+    # # Create the plot using seaborn
+    # sns.set(style="whitegrid")
+    # plt.figure(figsize=(10, 6))
+    # sns.violinplot(x='distance', y='cameras', data=df_melted, inner="box", cut=0)
+    # plt.title('Cameras Passed per Route')
+    # plt.xlabel('Distance')
+    # plt.ylabel('Average number of cameras passed per route')
+    # plt.show()
+
+    plt.figure(figsize=(10, 12))
+    ax = sns.violinplot(x='distance', y='cameras', data=cameras_reached_df, inner='quartile')
+    ax.set_title(title)
+    ax.set_xlabel(x_label)
+    ax.set_ylabel(y_label)
+    ax.title.set_fontsize(32)
+    # increase font size
+    for item in ([ax.xaxis.label, ax.yaxis.label] + ax.get_xticklabels() + ax.get_yticklabels()):
+        item.set_fontsize(24)
+    if save_path is not None:
+        plt.savefig(save_path, bbox_inches='tight')
+    plt.show()
 
 
 def make_argparser():
@@ -435,6 +476,9 @@ if __name__ == '__main__':
             f'(median: {np.median(cameras_reached) if sum(cameras_reached) > 0 else "NaN"})'
         )
         print(cameras_reached)
+
+        # make_violin_plot(data, title='Cameras Passed Along Simulated Routes', x_label='Distance (miles)', y_label='Cameras passed per route', save_path=f'results/violin_sd${args.start_district}_drt${args.destination_radius_threshold}_dwl-${destination_labels_whitelist}.png')
+
 
         plt.figure(figsize=(8, 10))
         # make a bar plot using cameras_reached as the data with the labels being the unique entries in labels and the values as percentages
